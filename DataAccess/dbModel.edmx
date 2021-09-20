@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LoanFeeControlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="sp_calculate_quota" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="age" Type="int" Mode="In" />
+          <Parameter Name="idMonth" Type="int" Mode="In" />
+          <Parameter Name="amount" Type="decimal" Mode="In" />
+          <Parameter Name="ip" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_get_log" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_get_months" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="LoanFeeControlModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LoanFeeControlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LoanFeeControlEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="sp_calculate_quota" ReturnType="Collection(String)">
+            <Parameter Name="age" Mode="In" Type="Int32" />
+            <Parameter Name="idMonth" Mode="In" Type="Int32" />
+            <Parameter Name="amount" Mode="In" Type="Decimal" />
+            <Parameter Name="ip" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_get_log" ReturnType="Collection(LoanFeeControlModel.sp_get_log_Result)" />
+          <FunctionImport Name="sp_get_months" ReturnType="Collection(LoanFeeControlModel.sp_get_months_Result)" />
+        </EntityContainer>
+        <ComplexType Name="sp_get_log_Result">
+          <Property Type="Int32" Name="ID_de_consulta" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_de_consulta" Nullable="false" />
+          <Property Type="Int32" Name="Edad" Nullable="false" />
+          <Property Type="Decimal" Name="Monto" Nullable="false" Precision="10" Scale="5" />
+          <Property Type="String" Name="Meses" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="Valor_Cuota" Nullable="false" Precision="10" Scale="5" />
+          <Property Type="String" Name="IP_de_Consulta" Nullable="false" MaxLength="25" />
+        </ComplexType>
+        <ComplexType Name="sp_get_months_Result">
+          <Property Type="Int32" Name="idMonth" Nullable="false" />
+          <Property Type="String" Name="description" Nullable="false" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LoanFeeControlModelStoreContainer" CdmEntityContainer="LoanFeeControlEntities" >
+          <FunctionImportMapping FunctionImportName="sp_calculate_quota" FunctionName="LoanFeeControlModel.Store.sp_calculate_quota" />
+          <FunctionImportMapping FunctionImportName="sp_get_log" FunctionName="LoanFeeControlModel.Store.sp_get_log">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LoanFeeControlModel.sp_get_log_Result">
+                <ScalarProperty Name="ID_de_consulta" ColumnName="ID de consulta" />
+                <ScalarProperty Name="Fecha_de_consulta" ColumnName="Fecha de consulta" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="Meses" ColumnName="Meses" />
+                <ScalarProperty Name="Valor_Cuota" ColumnName="Valor Cuota" />
+                <ScalarProperty Name="IP_de_Consulta" ColumnName="IP_de_Consulta" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_get_months" FunctionName="LoanFeeControlModel.Store.sp_get_months">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LoanFeeControlModel.sp_get_months_Result">
+                <ScalarProperty Name="idMonth" ColumnName="idMonth" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

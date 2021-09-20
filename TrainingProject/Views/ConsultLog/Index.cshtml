@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BussinessLogic.Models.ConsultLogModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Historial de consultas</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idConsult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateConsult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.months)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ipConsult)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idConsult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateConsult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.age)
+        </td>
+        <td>
+            $ @Html.DisplayFor(modelItem => item.amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.months)
+        </td>
+        <td>
+            $ @Html.DisplayFor(modelItem => item.quota)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ipConsult)
+        </td>
+    </tr>
+}
+
+</table>

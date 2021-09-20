@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LoanFeeControlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="LoanFeeControlEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_calculate_quota" ReturnType="Collection(String)">
+      <Parameter Name="age" Mode="In" Type="Int32" />
+      <Parameter Name="idMonth" Mode="In" Type="Int32" />
+      <Parameter Name="amount" Mode="In" Type="Decimal" />
+      <Parameter Name="ip" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_get_log" ReturnType="Collection(LoanFeeControlModel.sp_get_log_Result)" />
+    <FunctionImport Name="sp_get_months" ReturnType="Collection(LoanFeeControlModel.sp_get_months_Result)" />
+  </EntityContainer>
+  <ComplexType Name="sp_get_log_Result">
+    <Property Type="Int32" Name="ID_de_consulta" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_de_consulta" Nullable="false" />
+    <Property Type="Int32" Name="Edad" Nullable="false" />
+    <Property Type="Decimal" Name="Monto" Nullable="false" Precision="10" Scale="5" />
+    <Property Type="String" Name="Meses" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="Valor_Cuota" Nullable="false" Precision="10" Scale="5" />
+    <Property Type="String" Name="IP_de_Consulta" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="sp_get_months_Result">
+    <Property Type="Int32" Name="idMonth" Nullable="false" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="100" />
+  </ComplexType>
+</Schema>

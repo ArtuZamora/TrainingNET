@@ -1,0 +1,12 @@
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\DataAccess\obj\Debug\DataAccess.pdb

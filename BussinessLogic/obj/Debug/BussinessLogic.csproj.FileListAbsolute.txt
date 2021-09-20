@@ -1,0 +1,15 @@
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\BussinessLogic.dll.config
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\BussinessLogic.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\BussinessLogic.pdb
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\DataAccess.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\DataAccess.dll.config
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\obj\Debug\BussinessLogic.csproj.AssemblyReference.cache
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\obj\Debug\BussinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\obj\Debug\BussinessLogic.csproj.CopyComplete
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\obj\Debug\BussinessLogic.dll
+C:\Users\r2zam\OneDrive - Universidad Don Bosco\Work\Training\TrainingProject\BussinessLogic\obj\Debug\BussinessLogic.pdb

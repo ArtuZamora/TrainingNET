@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LoanFeeControlModelStoreContainer" CdmEntityContainer="LoanFeeControlEntities">
+    <FunctionImportMapping FunctionImportName="sp_calculate_quota" FunctionName="LoanFeeControlModel.Store.sp_calculate_quota" />
+    <FunctionImportMapping FunctionImportName="sp_get_log" FunctionName="LoanFeeControlModel.Store.sp_get_log">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LoanFeeControlModel.sp_get_log_Result">
+          <ScalarProperty Name="ID_de_consulta" ColumnName="ID de consulta" />
+          <ScalarProperty Name="Fecha_de_consulta" ColumnName="Fecha de consulta" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Meses" ColumnName="Meses" />
+          <ScalarProperty Name="Valor_Cuota" ColumnName="Valor Cuota" />
+          <ScalarProperty Name="IP_de_Consulta" ColumnName="IP_de_Consulta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_get_months" FunctionName="LoanFeeControlModel.Store.sp_get_months">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LoanFeeControlModel.sp_get_months_Result">
+          <ScalarProperty Name="idMonth" ColumnName="idMonth" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
